@@ -7,7 +7,7 @@ export interface IngresoLote {
   descript: string;
   detArtEntradaId?: string;
   fecha_ingreso: string;
-  id?: string;
+  id: string;
   id_articulo: number;
   id_lot: number;
   num_articulo: number;

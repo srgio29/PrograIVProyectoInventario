@@ -17,8 +17,11 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 
 
 @NgModule({
@@ -35,11 +38,17 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   imports: [
     CommonModule,
     MantenimientoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     NzTableModule,
     NzDividerModule,
     NzIconModule,
     NzGridModule,
-    NzButtonModule
+    NzButtonModule,
+    NzPopconfirmModule,
+    NzMessageModule,
+    NzModalModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
