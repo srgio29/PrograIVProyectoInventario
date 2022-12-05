@@ -1,0 +1,51 @@
+<p>ingreso-lot works!</p>
+
+<div nz-row nzJustify="center" nzAlign="middle">
+    <div nz-col nzSpan="24" nzJustify="center">
+        <h1>Lotes</h1>
+    </div>
+</div> 
+<div nz-row>
+    <div nz-col nzSpan="24"><button nz-button nzType="primary">Nuevo Lote</button></div>
+</div> 
+<hr>  
+<div nz-row>
+
+    <div nz-col nz-Span="24">
+        <nz-table #basicTable [nzData]="IngresoLote">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Descripcion de Lote</th>
+                    <th>#Id de Articulo en Lote</th>
+                    <th>Codigo de Articulo</th>
+                    <th>Cantidad de Articulo</th>
+                    <th>Descripcion de Articulo</th>
+                    <th>Costo de Articulo</th> 
+                    <th>Codigo de Gestion de Lote</th>   
+                    <th>Id de Usuario</th>             
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of basicTable.data; let i=index">
+                    <td>{{data.id_lot}}</td>
+                    <td>{{data.fecha_ingreso}}</td>
+                    <td>{{data.id_articulo}}</td>
+                    <td>{{data.num_articulo}}</td>
+                    <td>{{data.cantidad}}</td>
+                    <td>{{data.descript}}</td>
+                    <td>{{data.costo_total}}</td>
+                    <td>{{data.id}}</td> 
+                    <td>{{data.usuarioId}}</td>         
+                    <td>
+                        <a><i nz-icon nzType="edit" nzTheme="twotone"></i></a>
+                        <nz-divider nzType="vertical"></nz-divider>
+                        <a><i nz-icon nzType="delete" nzTheme="outline"></i></a>                        
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>  
+</div>      
+  
