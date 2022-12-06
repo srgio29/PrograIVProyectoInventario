@@ -21,6 +21,10 @@ import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
@@ -40,7 +44,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MantenimientoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
     NzTableModule,
     NzDividerModule,
     NzIconModule,
@@ -48,7 +51,11 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     NzButtonModule,
     NzPopconfirmModule,
     NzMessageModule,
-    NzModalModule
+    NzModalModule,
+    NzInputModule,
+    NzRadioModule,
+    NzDatePickerModule,
+    NzSelectModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

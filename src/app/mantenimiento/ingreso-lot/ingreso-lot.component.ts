@@ -21,8 +21,7 @@ export class IngresoLotComponent implements OnInit {
     private fb:FormBuilder
   ) {}
 
-    formIngresoLote: FormGroup = this.fb.group
-    ({
+    formIngresoLote: FormGroup = this.fb.group({
       id:[],
       fechaIngreso:[],
       descripcionLote:[],
