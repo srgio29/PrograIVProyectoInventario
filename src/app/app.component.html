@@ -11,49 +11,39 @@
         <h1>Ant Design Of Angular</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
-          </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="Mantenimientos" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="mantenimiento/ingresolot">IngresoLot</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Articulos</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Detalle Articulo Entrada</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Movimiento</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Detalle Articulo Salida</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Categoria</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a> Salida </a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a> Usuario </a>
+      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+          <ul>
+            <li nz-menu-item nzMatchRouter>
+              <li nz-submenu nzOpen nzTitle="Mantenimientos" nzIcon="form">
+            <ul>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/ingresolot">IngresoLot</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/articulo">Articulos</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/detalleartentrada">Detalle Articulo Entrada</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/movimiento">Movimiento</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/detalleartsalida">Detalle Articulo Salida</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/categoria">Categoria</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="mantenimiento/salida"> Salida </a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                  <a routerLink="mantenimiento/usuario">Usuario </a>
+              </li>
+            </ul>
           </li>
         </ul>
-      </li>
-    </ul>
+      </ul>
   </nz-sider>
   <nz-layout>
     <nz-header>
