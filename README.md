@@ -22,7 +22,7 @@ Pagina Inicial
 ![](imagenes/Imagen1.png)
 
 Pagina principal de Manejo de Lotes de Inventario
-![](imagenes/Imagen2.png)
+![](imagenes/Imagen3.png)
 
 ## Enlaces
 
