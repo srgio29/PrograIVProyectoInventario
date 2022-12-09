@@ -19,10 +19,10 @@ En el siguiente repositorio se logra publicar el trabajo realizad en front-end p
 
 ## Imagenes
 Pagina Inicial
-![](imagenes/Imagen1.png)
+![](imagenes/Imagen3.png)
 
 Pagina principal de Manejo de Lotes de Inventario
-![](imagenes/Imagen3.png)
+![](imagenes/Imagen1.png)
 
 ## Enlaces
 
