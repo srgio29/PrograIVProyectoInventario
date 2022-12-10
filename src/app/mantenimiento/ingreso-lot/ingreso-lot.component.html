@@ -49,8 +49,8 @@
                         nzPopconfirmPlacement="bottom" (nzOnConfirm)="eliminar(data.id)" (nzOnCancel)="cancel()"
                         nzShape="circle" nzCancelText="No" nzOkText="Si"><i nz-icon nzType="delete"
                         nzTheme="outline"></i></a>  
-                        <nz-divider nzType="vertical"></nz-divider>
-                        <button (click)="mostrarArticulo()" nz-button nzType="primary">Agregar Articulo</button>                     
+                        <!--<nz-divider nzType="vertical"></nz-divider>
+                        <button (click)="mostrarArticulo()" nz-button nzType="primary">Agregar Articulo</button> -->                    
                     </td>
                 </tr>
             </tbody>
@@ -120,12 +120,12 @@
     <div *nzModalFooter>
         <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
         <button nz-button nzType="primary" (click)="guardar()">Guardar</button>
-    </div>    
+   </div>    
   </nz-modal>
 
 
 
-
+  <!--
   <nz-modal [(nzVisible)]="visible" nzTitle="Administracion de Articulos">
     <ng-container *nzModalContent>
         <form nz-formnzLayout="vertical" (ngSubmit)="guardarArticulo()" [formGroup]="formArticulo">
@@ -186,4 +186,4 @@
         <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
         <button nz-button nzType="primary" (click)="guardarArticulo()">Guardar</button>
     </div>    
-  </nz-modal>
+  </nz-modal>-->
