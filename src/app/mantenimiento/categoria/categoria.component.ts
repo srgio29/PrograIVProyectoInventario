@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Categoria } from 'src/app/api/models';
-import { CategoriaControllerService } from 'src/app/api/services';
+import { Categoria} from 'src/app/api/models';
+import { CategoriaControllerService, IngresoLoteControllerService } from 'src/app/api/services';
 import { NzMessageService } from 'ng-zorro-antd/message'
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -17,6 +17,7 @@ export class CategoriaComponent implements OnInit{
   constructor(
     private categoriaService: CategoriaControllerService,
     private messageService:NzMessageService,
+    private ingresoLoteService: IngresoLoteControllerService,
     private fb:  FormBuilder
 
     ){}
