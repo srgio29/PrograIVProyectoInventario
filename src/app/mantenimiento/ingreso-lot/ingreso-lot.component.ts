@@ -76,7 +76,7 @@ export class IngresoLotComponent implements OnInit {
 
   mostrar(data?:IngresoLote):void{
     if (data?.id) {
-      this.formIngresoLote.setValue({ ...data, 'disponible': String(data.id) })
+      this.formIngresoLote.setValue(data)
     }
     this.visible = true
   }
@@ -84,13 +84,12 @@ export class IngresoLotComponent implements OnInit {
 
   mostrarArticulo(data?:IngresoLote):void{
     if (data?.id) {
-      this.formArticulo.setValue({ ...data, 'disponible': String(data.id) })
+      this.formArticulo.setValue(data)
     }
     this.visible = true
   }
 
   guardar():void{
-    this.formIngresoLote.setValue({ ...this.formIngresoLote.value, 'disponible': Boolean(this.formIngresoLote.value.disponible) })
     if (this.formIngresoLote.value.id) {
       this.ingresoLoteService.updateById({ 'id': this.formIngresoLote.value.id, 'body': this.formIngresoLote.value }).subscribe(
         () => {
