@@ -17,14 +17,18 @@ En el siguiente repositorio se logra publicar el trabajo realizad en front-end p
 - Typescript
 - Github Pages
 
-## Imagenes
-Pagina Inicial
-![](imagenes/Imagen3.png)
-
-Pagina principal de Manejo de Lotes de Inventario
-![](imagenes/Imagen1.png)
-
 ## Enlaces
 
 [Enlace en Github Pages](https://srgio29.github.io/PrograIVProyectoInventario/#/) <br>
 [Enlace de Netlify](https://proyecto-inventario-grupo1-progra4.netlify.app/#/) <br>
+
+## Imagenes
+Pagina Inicial
+![](imagenes/Imagen3.png)
+
+Version Movil
+![](imagenes/CodigoQR.jpg)
+
+Pagina principal de Manejo de Lotes de Inventario
+![](imagenes/Imagen1.png)
+
