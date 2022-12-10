@@ -28,7 +28,3 @@ Pagina principal de Manejo de Lotes de Inventario
 
 [Enlace en Github Pages](https://srgio29.github.io/PrograIVProyectoInventario/#/) <br>
 [Enlace de Netlify](https://proyecto-inventario-grupo1-progra4.netlify.app/#/) <br>
-
-
-
-## Test
