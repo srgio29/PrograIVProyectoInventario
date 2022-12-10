@@ -6,7 +6,7 @@
  */
 export interface CategoriaWithRelations {
   descripcion: string;
-  id?: string;
+  id: string;
   industria: string;
   ingresoLoteId?: string;
   nombre: string;
