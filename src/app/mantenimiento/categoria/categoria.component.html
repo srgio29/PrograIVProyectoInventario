@@ -25,17 +25,15 @@
                     <td>{{data.descripcion}}</td>
                     <td>{{data.industria}}</td>
                     <td>{{data.nombre}}</td>
-                    
-                    <td>
-                        <a (click)="mostrar(data)"> <i nz-icon nzType="edit" nzTheme="twotone"></i></a>
-                        <nz-divider nzType="vertical"></nz-divider>
-                        <a nz-popconfirm nzPopconfirmTitle="¿Está seguro de borrar el registro?"
-                            nzPopconfirmPlacement="bottom" (nzOnConfirm)="eliminar(data.id)" (nzOnCancel)="cancel()"
-                            nzShape="circle" nzCancelText="No" nzOkText="Si"><i nz-icon nzType="delete"
-                                nzTheme="outline"></i></a>
-                    </td>
-                </tr>
-            </tbody>
+               
+                <td>
+                    <a (click)="mostrar(data)"><i nz-icon nzType="edit" nzTheme="twotone"></i></a>
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a nz-popconfirm nzPopconfirmTitle="¿Está seguro de borrar el registro?"
+                        nzPopconfirmPlacement="bottom" (nzOnConfirm)="eliminar(data.id)" (nzOnCancel)="cancel()"
+                        nzShape="circle" nzCancelText="No" nzOkText="Si"><i nz-icon nzType="delete"
+                            nzTheme="outline"></i></a>
+                </td>
         </nz-table>
     </div>
 </div>
@@ -63,7 +61,7 @@
                     </nz-form-item>
                 </div>
             </div>
-            <div nz-row [nzGutter]="10">
+            <div nz-row [nzGutter]="8">
                 <div nz-col nzSpan="24">
                     <nz-form-item>
                         <nz-form-label>Nombre</nz-form-label>
