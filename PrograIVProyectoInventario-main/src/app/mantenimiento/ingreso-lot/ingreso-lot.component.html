@@ -1,0 +1,189 @@
+<p>ingreso-lot works!</p>
+
+<div nz-row nzJustify="center" nzAlign="middle">
+    <div nz-col nzSpan="24" nzJustify="center">
+        <h1>Lotes</h1>
+    </div>
+</div> 
+<div nz-row>
+    <div nz-col nzSpan="24"><button (click)="mostrar()" nz-button nzType="primary">Nuevo Lote</button></div>
+</div> 
+<hr>  
+<div nz-row>
+
+    <div nz-col nz-Span="24">
+        <nz-table #basicTable [nzData]="IngresoLote">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id de Lote</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Descripcion de Lote</th>
+                    <th>#Id de Articulo en Lote</th>
+                    <th>Codigo de Articulo</th>
+                    <th>Cantidad de Articulo</th>
+                    <th>Descripcion de Articulo</th>
+                    <th>Costo de Articulo</th> 
+                    <th>Codigo de Gestion de Lote</th>   
+                    <th>Id de Usuario</th>
+                    <th>Acciones</th>         
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of basicTable.data; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{data.id_lot}}</td>
+                    <td>{{data.fecha_ingreso}}</td>
+                    <td>{{data.descripcion}}</td>                    
+                    <td>{{data.id_articulo}}</td>
+                    <td>{{data.num_articulo}}</td>
+                    <td>{{data.cantidad}}</td>
+                    <td>{{data.descript}}</td>
+                    <td>{{data.costo_total}}</td>
+                    <td>{{data.id}}</td> 
+                    <td>{{data.usuarioId}}</td>         
+                    <td>
+                        <a (click)="mostrar(data)"><i nz-icon nzType="edit" nzTheme="twotone"></i></a>
+                        <nz-divider nzType="vertical"></nz-divider>
+                        <a nz-popconfirm nzPopconfirmTitle="Esta seguro de borrar el registro?"
+                        nzPopconfirmPlacement="bottom" (nzOnConfirm)="eliminar(data.id)" (nzOnCancel)="cancel()"
+                        nzShape="circle" nzCancelText="No" nzOkText="Si"><i nz-icon nzType="delete"
+                        nzTheme="outline"></i></a>  
+                        <!--<nz-divider nzType="vertical"></nz-divider>
+                        <button (click)="mostrarArticulo()" nz-button nzType="primary">Agregar Articulo</button> -->                    
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>  
+</div>      
+
+
+
+<nz-modal [(nzVisible)]="visible" nzTitle="Administracion Lotes">
+    <ng-container *nzModalContent>
+        <form nz-formnzLayout="vertical" (ngSubmit)="guardar()" [formGroup]="formIngresoLote">
+            <div nz-row [nzGutter]="6">
+                <div nz-col nzSpan="10">
+                    <nz-form-item>
+                        <nz-form-label>Fecha de Ingreso</nz-form-label>
+                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                            <nz-date-picker formControlName="fechaIngreso" nzPlaceHolder="Seleccione la Fecha"></nz-date-picker>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div nz-col nzSpan="10">
+                    <nz-form-item>
+                        <nz-form-label>Cantidad de Articulos</nz-form-label>
+                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                            <input formControlName="cantidadArticulo" nz-input PlaceHolder="Cantidad de Articulos"/>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                    <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Codigo de serie del articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="codigoArticulo" nz-input PlaceHolder="# Codigo de Serie de Articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>                  
+                   <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Descripcion de Articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="descripcionArticulo" nz-input PlaceHolder="Escriba una descripcion del articulo que incluye el lote"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>            
+
+                    <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Costo de Articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="costoArticulo" nz-input PlaceHolder="Inserte el costo del articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>                
+                <div nz-col nzSpan="10">
+                    <nz-form-item>
+                        <nz-form-label>Descripcion del Lote</nz-form-label>
+                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                            <input formControlName="descripcionLote" nz-input PlaceHolder="Descripcion del lote"/>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>        
+
+        </form>                               
+    </ng-container>
+    <div *nzModalFooter>
+        <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
+        <button nz-button nzType="primary" (click)="guardar()">Guardar</button>
+   </div>    
+  </nz-modal>
+
+
+
+  <!--
+  <nz-modal [(nzVisible)]="visible" nzTitle="Administracion de Articulos">
+    <ng-container *nzModalContent>
+        <form nz-formnzLayout="vertical" (ngSubmit)="guardarArticulo()" [formGroup]="formArticulo">
+            <div nz-row [nzGutter]="6">
+                <div nz-col nzSpan="10">
+                    <nz-form-item>
+                        <nz-form-label>Cantidad de Articulo</nz-form-label>
+                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                            <input formControlName="cant_art" nz-input PlaceHolder="Cantidad de Articulos"/>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div nz-col nzSpan="10">
+                    <nz-form-item>
+                        <nz-form-label>Color de Articulos</nz-form-label>
+                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                            <input formControlName="color" nz-input PlaceHolder="Color de Articulos"/>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                    <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Codigo de serie del articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="id_art" nz-input PlaceHolder="# Codigo de Serie de Articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>                  
+                   <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Descripcion de Articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="descripcion" nz-input PlaceHolder="Descripcion del Articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>            
+
+                    <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Costo de Articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="costo" nz-input PlaceHolder="Costo del articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>       
+                    <div nz-col nzSpan="10">
+                        <nz-form-item>
+                            <nz-form-label>Material de Articulo</nz-form-label>
+                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
+                                <input formControlName="material" nz-input PlaceHolder="Material del articulo"/>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>             
+            </div>        
+        </form>                               
+    </ng-container>
+    <div *nzModalFooter>
+        <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
+        <button nz-button nzType="primary" (click)="guardarArticulo()">Guardar</button>
+    </div>    
+  </nz-modal>-->
