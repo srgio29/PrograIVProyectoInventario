@@ -10,7 +10,7 @@ export interface DetalleArtSalidaWithRelations {
   articulos?: Array<ArticuloWithRelations>;
   autorizacion: boolean;
   cantidad: number;
-  id?: string;
+  id: string;
   id_art: number;
   id_oc: number;
   precioV: number;
