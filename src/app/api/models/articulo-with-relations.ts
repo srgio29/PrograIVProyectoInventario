@@ -11,7 +11,7 @@ export interface ArticuloWithRelations {
   descripcion: string;
   detArtEntradaId?: string;
   detalleArtSalidaId?: string;
-  id?: string;
+  id: string;
   id_art: number;
   ingresoLoteId?: string;
   material: string;

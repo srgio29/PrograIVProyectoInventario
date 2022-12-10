@@ -9,7 +9,7 @@ export interface MovimientoWithRelations {
   cantidad: number;
   detArtEntradaId?: string;
   detArtEntradas?: Array<DetArtEntradaWithRelations>;
-  id: string;
+  id?: string;
   id_art: number;
   id_lot: number;
 }
