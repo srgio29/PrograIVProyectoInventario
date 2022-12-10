@@ -50,7 +50,7 @@
                         nzShape="circle" nzCancelText="No" nzOkText="Si"><i nz-icon nzType="delete"
                         nzTheme="outline"></i></a>  
                         <nz-divider nzType="vertical"></nz-divider>
-                        <button (click)="mostrarArticulo()" nz-button nzType="primary">Agregar Articulo</button>                     
+                        <button (click)="mostrar()" nz-button nzType="primary">Agregar Lote</button>                     
                     </td>
                 </tr>
             </tbody>
@@ -123,67 +123,3 @@
     </div>    
   </nz-modal>
 
-
-
-
-  <nz-modal [(nzVisible)]="visible" nzTitle="Administracion de Articulos">
-    <ng-container *nzModalContent>
-        <form nz-formnzLayout="vertical" (ngSubmit)="guardarArticulo()" [formGroup]="formArticulo">
-            <div nz-row [nzGutter]="6">
-                <div nz-col nzSpan="10">
-                    <nz-form-item>
-                        <nz-form-label>Cantidad de Articulo</nz-form-label>
-                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                            <input formControlName="cant_art" nz-input PlaceHolder="Cantidad de Articulos"/>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-                <div nz-col nzSpan="10">
-                    <nz-form-item>
-                        <nz-form-label>Color de Articulos</nz-form-label>
-                        <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                            <input formControlName="color" nz-input PlaceHolder="Color de Articulos"/>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-                    <div nz-col nzSpan="10">
-                        <nz-form-item>
-                            <nz-form-label>Codigo de serie del articulo</nz-form-label>
-                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                                <input formControlName="id_art" nz-input PlaceHolder="# Codigo de Serie de Articulo"/>
-                            </nz-form-control>
-                        </nz-form-item>
-                    </div>                  
-                   <div nz-col nzSpan="10">
-                        <nz-form-item>
-                            <nz-form-label>Descripcion de Articulo</nz-form-label>
-                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                                <input formControlName="descripcion" nz-input PlaceHolder="Descripcion del Articulo"/>
-                            </nz-form-control>
-                        </nz-form-item>
-                    </div>            
-
-                    <div nz-col nzSpan="10">
-                        <nz-form-item>
-                            <nz-form-label>Costo de Articulo</nz-form-label>
-                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                                <input formControlName="costo" nz-input PlaceHolder="Costo del articulo"/>
-                            </nz-form-control>
-                        </nz-form-item>
-                    </div>       
-                    <div nz-col nzSpan="10">
-                        <nz-form-item>
-                            <nz-form-label>Material de Articulo</nz-form-label>
-                            <nz-form-control nzErrorTip="Por favor escriba el dato correcto!">
-                                <input formControlName="material" nz-input PlaceHolder="Material del articulo"/>
-                            </nz-form-control>
-                        </nz-form-item>
-                    </div>             
-            </div>        
-        </form>                               
-    </ng-container>
-    <div *nzModalFooter>
-        <button nz-button nzType="default" (click)="ocultar()">Cancelar</button>
-        <button nz-button nzType="primary" (click)="guardarArticulo()">Guardar</button>
-    </div>    
-  </nz-modal>
