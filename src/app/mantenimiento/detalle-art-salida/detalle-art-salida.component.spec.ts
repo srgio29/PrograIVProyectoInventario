@@ -1,23 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { DetalleArtSalidaComponent } from './detalle-art-salida.component';
+@Component({
+  selector: 'app-detalle-art-salida',
+  templateUrl: './detalle-art-salida.component.html',
+  styleUrls: ['./detalle-art-salida.component.css']
+})
+export class DetalleArtSalidaComponent {
 
-describe('DetalleArtSalidaComponent', () => {
-  let component: DetalleArtSalidaComponent;
-  let fixture: ComponentFixture<DetalleArtSalidaComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ DetalleArtSalidaComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(DetalleArtSalidaComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
