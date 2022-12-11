@@ -27,7 +27,7 @@ En el siguiente repositorio se logra publicar el trabajo realizad en front-end p
 Pagina Inicial
 ![](imagenes/Imagen3.png)
 
-Version Movil
+Version Movil<br>
 ![](imagenes/CodigoQR.jpg)
 
 Pagina principal de Manejo de Lotes de Inventario
