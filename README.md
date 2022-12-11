@@ -16,6 +16,7 @@ En el siguiente repositorio se logra publicar el trabajo realizad en front-end p
 - Angular
 - Typescript
 - Github Pages
+- Netlify
 
 ## Enlaces
 
